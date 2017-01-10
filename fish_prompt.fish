@@ -22,21 +22,22 @@ function fish_prompt -d "Write the left-side prompt"
 	# Check difference between plumbing and porcelain Git commands
 	# http://stackoverflow.com/questions/2657935/checking-for-a-dirty-index-or-untracked-files-with-git
 	set -l git_is_dirty (git status --porcelain 2>/dev/null | grep "^." --count)
+	if test $git_is_dirty -gt 0
+		echo -n '*'
+	end
+
 	set -l git_is_ahead (git status 2>/dev/null | grep 'branch is ahead of' --count)
 	set -l git_is_behind (git status 2>/dev/null | grep 'branch is behind' --count)
-	if test $git_is_dirty -gt 0
-		echo -n '* '
-	else if test $git_is_ahead -gt 0
+	if test $git_is_ahead -gt 0
 		set_color -o 3D1
-		echo -n '🡑 '
+		echo -n '🡑'
 		set_color normal
 	else if test $git_is_behind -gt 0 # Case hasn't been tested
 		set_color $fish_color_error
-		echo -n '🡓 '
+		echo -n '🡓'
 		set_color normal
-	else
-		echo -n ' '
 	end
+	echo -n ' '
 
 	# Different prompts for root or standard user
 	if test $USER = 'root'
