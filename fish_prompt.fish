@@ -1,8 +1,14 @@
 function fish_prompt -d "Write the left-side prompt"
 	#set -l last_status $status
+	#if not set -q __fish_prompt_normal
+	#	set -g __fish_prompt_normal (set_color normal)
+	#end
 
-	if not set -q __fish_prompt_normal
-		set -g __fish_prompt_normal (set_color normal)
+	# For use with virtualfish
+	if set -q VIRTUAL_ENV
+		set_color $fish_color_autosuggestion
+		echo -n -s "(" (basename $VIRTUAL_ENV | cut -c1-4) ") "
+		set_color normal
 	end
 
 	# First four letters of username
