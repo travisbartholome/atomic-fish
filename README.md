@@ -2,7 +2,7 @@
 
 A theme for the fish shell designed to work well with the Atom text editor and GitHub.
 
-![Screenshot of the atomic-fish theme.](raw.githubusercontent.com/travisbartholome/atomic-fish/master/atomic-fish-screenshot.png)
+![Screenshot of the atomic-fish theme.](https://raw.githubusercontent.com/travisbartholome/atomic-fish/master/atomic-fish-screenshot.png)
 
 ## Aliases
 
