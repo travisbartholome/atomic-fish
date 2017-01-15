@@ -4,6 +4,24 @@ A theme for the fish shell designed to work well with the Atom text editor and G
 
 ![Screenshot of the atomic-fish theme.](https://raw.githubusercontent.com/travisbartholome/atomic-fish/master/atomic-fish-screenshot.png)
 
+## Theme features
+
+- Truncated username
+
+- Short working directory (normal fish_prompt style)
+
+- Shows working Git branch
+
+- `*` if Git is dirty
+
+- Arrows to indicate if local repo is ahead or behind the remote
+
+- Shows Git insertions and deletions since last commit
+
+- Different prompts for normal users (`>`) and root (`#`)
+
+- Default virtualfish prompt modification.
+
 ## Aliases
 
 - `$ a [file]` => `$ atom [file]`
