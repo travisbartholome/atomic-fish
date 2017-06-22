@@ -29,6 +29,7 @@ A theme for the fish shell designed to work well with the Atom text editor and G
 - `$ gad` => `$ git add .`
 - `$ gkm [MESSAGE]` => `$ git commit -m [MESSAGE]`
 - `$ gst` => `$ git status`
+- `$ gps` => `$ git push`
 
 ## Potential key bindings
 
